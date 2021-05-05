@@ -14,7 +14,9 @@ class AppComponent extends Component {
     const cy = new Cytoscape({
       elements,
       style,
-      layout: { name: 'preset' },
+      layout: { 
+        name: 'preset',
+      },
       selectionType: 'single',
       boxSelectionEnabled: false
     });
@@ -37,7 +39,7 @@ class AppComponent extends Component {
 
     bus.on('hideInfo', this.onHideInfo = (() => {
       this.setState({ infoNode: null });
-    }));
+    }));    
   }
 
   componentWillUnmount(){

@@ -113,6 +113,7 @@ class Controller {
         animate: true,
         animationDuration: animationDuration,
         animationEasing: easing,
+        minNodeSpacing: 50,
         boundingBox: {
           x1: p.x - 1,
           x2: p.x + 1,

@@ -5,13 +5,15 @@ core {
 }
 
 edge {
-	curve-style: haystack;
-	haystack-radius: 0;
-	opacity: 0.333;
+	curve-style: bezier;
+	opacity: 0.4;
 	width: 2;
 	z-index: 0;
 	overlay-opacity: 0;
-  events: no;
+    events: no;
+    content: data(name);
+    target-arrow-shape: triangle;
+    font-size: 6;
 }
 
 node {
@@ -53,8 +55,7 @@ node[NodeType = "CheeseType"][Quality] {
 }
 
 node[NodeType = "WhiteWine"] {
-	background-color: white;
-	text-outline-color: white;
+	background-color: #EEAAAA;
 }
 
 edge[interaction = "cw"] {
@@ -62,8 +63,7 @@ edge[interaction = "cw"] {
 }
 
 node[NodeType = "RedWine"] {
-	background-color: #DE3128;
-	text-outline-color: #DE3128;
+	background-color: #AAEEAA;
 }
 
 edge[interaction = "cr"] {
