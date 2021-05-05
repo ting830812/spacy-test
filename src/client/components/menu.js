@@ -96,7 +96,7 @@ class Menu extends Component {
         h('input', {
           type: 'text',
           class: 'menu-search',
-          placeholder: 'Search',
+          placeholder: 'Ex: hypertrophic cardiomyopathy',
           id: 'menu-search',
           onClick: () => this.open(),
           onKeyDown: () => this.debouncedUpdateSearch()
