@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import { Controller } from '../controller';
 import Cytoscape from 'cytoscape';
-import { elements, style } from '../cy-conf';
+import { elements, elements_stanford, elements_uw, style } from '../cy-conf';
 import CytoscapeComponent from './cytoscape';
 import { isDev } from '../env';
 import { NodeInfo } from './node-info';
@@ -10,16 +10,42 @@ import { Menu } from './menu';
 class AppComponent extends Component {
   constructor(props){
     super(props);
+    
+    let cy = new Cytoscape();
 
-    const cy = new Cytoscape({
-      elements,
-      style,
-      layout: { 
-        name: 'preset',
-      },
-      selectionType: 'single',
-      boxSelectionEnabled: false
-    });
+    if (props.data === 'spacy') {
+      cy = new Cytoscape({
+        elements,
+        style,
+        layout: { 
+          name: 'preset',
+        },
+        selectionType: 'single',
+        boxSelectionEnabled: false
+      });
+    }
+    else if (props.data === 'stanford'){
+      cy = new Cytoscape({
+        elements: elements_stanford,
+        style,
+        layout: { 
+          name: 'preset',
+        },
+        selectionType: 'single',
+        boxSelectionEnabled: false
+      });
+    }
+    else if (props.data === 'uw'){
+      cy = new Cytoscape({
+        elements: elements_uw,
+        style,
+        layout: { 
+          name: 'preset',
+        },
+        selectionType: 'single',
+        boxSelectionEnabled: false
+      });
+    }
 
     cy.nodes().panify().ungrabify();
 

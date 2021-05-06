@@ -7,7 +7,9 @@ const conf = {
   mode: nodeEnv,
 
   entry: {
-    bundle: './src/client/index.js',
+    bundle_spacy: './src/client/spacy.js',
+    bundle_uw: './src/client/uw.js',
+    bundle_stanford: './src/client/stanford.js',
     polyfills: './src/client/polyfills.js'
   },
 

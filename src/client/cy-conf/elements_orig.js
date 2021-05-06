@@ -1,4 +1,4 @@
-const elements = {
+const elements_orig = {
   "nodes": [
     {
       "data": {
@@ -28052,7 +28052,7 @@ const elements = {
 };
 
 // process data
-elements.nodes.forEach((n) => {
+elements_orig.nodes.forEach((n) => {
   const data = n.data;
 
   data.NodeTypeFormatted = data.NodeType;
@@ -28076,4 +28076,4 @@ elements.nodes.forEach((n) => {
   data.name = data.name.replace(/[-]/g, '-\u200B');
 });
 
-export default elements;
+export default elements_orig;

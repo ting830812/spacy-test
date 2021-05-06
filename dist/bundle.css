@@ -437,6 +437,8 @@ a {
   opacity: 0.2;
   width: 600px;
   line-height: 1.5;
+  max-height: 200px;
+  overflow: auto;
 }
 
 .app-node-info:hover {
