@@ -45,7 +45,7 @@ body,
 .loader-icon {
   width: 6em;
   height: 6em;
-  background-image: url('./images/icon.png');
+  background-image: url('./images/loading.gif');
   background-size: contain;
   background-repeat: no-repeat;
 }
