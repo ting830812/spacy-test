@@ -10,6 +10,7 @@ const conf = {
     bundle_spacy: './src/client/spacy.js',
     bundle_uw: './src/client/uw.js',
     bundle_stanford: './src/client/stanford.js',
+    bundle_spacy_abstract: './src/client/spacy_abstract.js',
     polyfills: './src/client/polyfills.js'
   },
 

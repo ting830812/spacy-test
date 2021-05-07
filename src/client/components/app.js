@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import { Controller } from '../controller';
 import Cytoscape from 'cytoscape';
-import { elements, elements_stanford, elements_uw, style } from '../cy-conf';
+import { elements, elements_stanford, elements_uw, elements_spacy_abstract, style } from '../cy-conf';
 import CytoscapeComponent from './cytoscape';
 import { isDev } from '../env';
 import { NodeInfo } from './node-info';
@@ -16,6 +16,17 @@ class AppComponent extends Component {
     if (props.data === 'spacy') {
       cy = new Cytoscape({
         elements,
+        style,
+        layout: { 
+          name: 'preset',
+        },
+        selectionType: 'single',
+        boxSelectionEnabled: false
+      });
+    }
+    else if (props.data === 'spacy_abstract') {
+      cy = new Cytoscape({
+        elements: elements_spacy_abstract,
         style,
         layout: { 
           name: 'preset',

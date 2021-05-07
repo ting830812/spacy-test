@@ -44,8 +44,7 @@ edge[interaction = "cc"] {
 
 node[NodeType = "Cheese"],
 node[NodeType = "CheeseType"] {
-	background-color: #FACD37;
-	text-outline-color: #FACD37;
+	background-color: #AAEEAA;
 }
 
 node[NodeType = "Cheese"][Quality],
@@ -63,7 +62,7 @@ edge[interaction = "cw"] {
 }
 
 node[NodeType = "RedWine"] {
-	background-color: #AAEEAA;
+	background-color: #EEEEAA;
 }
 
 edge[interaction = "cr"] {
